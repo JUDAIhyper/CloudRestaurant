@@ -6,9 +6,10 @@ import (
 	"CloudRestaurant/service"
 	"CloudRestaurant/tool"
 	"fmt"
-	"github.com/gin-gonic/gin"
 	"strconv"
 	"time"
+
+	"github.com/gin-gonic/gin"
 )
 
 type MemberController struct {
@@ -158,7 +159,7 @@ func (mc *MemberController) vertifyCaptcha(context *gin.Context) {
 }
 
 //短信验证码服务
-// http://localhost:8090/api/sendcode?phone=15811420676
+// http://localhost:8090/api/sendcode?phone=xxxxxx
 func (mc *MemberController) sendSmsCode(context *gin.Context) {
 	//发送验证码
 	phone, exist := context.GetQuery("phone")
