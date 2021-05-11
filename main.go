@@ -1,11 +1,19 @@
+/*
+ * @Author: JUDAIhyper
+ * @Date: 2021-05-06 17:02:21
+ * @LastEditTime: 2021-05-11 12:10:37
+ * @Description: CloudRestaurant Service
+ * @FilePath: \CloudRestaurant\main.go
+ */
 package main
 
 import (
 	"CloudRestaurant/controller"
 	"CloudRestaurant/middleware"
 	"CloudRestaurant/tool"
-	"github.com/gin-gonic/gin"
 	"log"
+
+	"github.com/gin-gonic/gin"
 )
 
 //路由设置，关联相关服务

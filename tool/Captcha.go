@@ -1,9 +1,10 @@
 package tool
 
 import (
+	"image/color"
+
 	"github.com/gin-gonic/gin"
 	"github.com/mojocn/base64Captcha"
-	"image/color"
 )
 
 type CaptchaResult struct {
@@ -14,7 +15,6 @@ type CaptchaResult struct {
 
 // 设置自带的store
 var store = base64Captcha.DefaultMemStore
-
 // 生成图形化验证码
 func GenerateCaptcha(ctx *gin.Context) {
 	var driver base64Captcha.Driver
@@ -47,7 +47,7 @@ func GenerateCaptcha(ctx *gin.Context) {
 		Failed(ctx, err.Error())
 	}
 	captchaResult := CaptchaResult{
-		Id:         id,
+		Id:          id,
 		CaptchaType: b64s,
 	}
 
