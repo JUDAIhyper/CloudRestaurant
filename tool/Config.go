@@ -30,7 +30,6 @@ type DatabaseConfig struct {
 	Port     string `json:"port"`
 	DbName   string `json:"db_name"`
 	Charset  string `json:"charset"`
-	ShowSQL  bool   `json:"show_sql"`
 }
 
 type RedisConfig struct {

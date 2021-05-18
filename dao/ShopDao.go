@@ -18,7 +18,7 @@ func NewShopDao() *ShopDao {
 */
 func (shopDao *ShopDao) QueryServiceByShopId(shopId int64) []model.Service {
 	var service []model.Service
-	err := shopDao.Joins("INNER JOIN service.id=shop_service.service_id and shop_service.shop_id=?", shopId).Find(&service).Error
+	err := shopDao.Joins("INNER JOIN service on service.id=shop_service.service_id and shop_service.shop_id=?", shopId).Find(&service).Error
 	if err != nil {
 		return nil
 	}
